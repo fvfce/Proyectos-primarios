@@ -58,6 +58,7 @@ header {
 
 .estrellas {
     display: flex;
+    list-style: none;
 }
 
 .estrellas li:hover {
@@ -70,8 +71,10 @@ header {
     margin-top: 6px;
 }
 
-ul {
+.navegacion-lista {
     list-style: none;
+    display: flex;
+    gap: 10px;
 }
 
 a {
@@ -121,6 +124,7 @@ a:hover {
 
 .lista-tecnilogias {
     border: 1px solid white;
+    list-style: none;
     border-radius: 6px;
     padding: 5px;
     box-sizing: border-box;
@@ -128,12 +132,12 @@ a:hover {
     gap: 10px;
 }
 
-.lista-tecnilogias il {
+.lista-tecnilogias li {
     font-size: 20px;
     transition: .1s;
 }
 
-.lista-tecnilogias il:hover {
+.lista-tecnilogias li:hover {
     letter-spacing: 2px;
     cursor: pointer;
 }
@@ -209,6 +213,7 @@ hr {
 
 .contactos-lista {
     display: flex;
+    list-style: none;
     flex-direction: column;
     gap: 20px;
     padding-bottom: 10px;
