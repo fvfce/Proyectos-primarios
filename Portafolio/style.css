@@ -7,7 +7,7 @@
 
 body {
     background-color: black;
-    animation: aparecer .6s;
+    /*animation: aparecer .6s;*/
 }
 
 @keyframes aparecer {
@@ -24,18 +24,26 @@ header {
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contenedor-encabezado {
+    width: 90%;
+    max-width: 800px;
     display: flex;
+    justify-content: center;
     margin-top: 20px;
-    margin-left: 18px;
     gap: 25px;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 10px;
 }
+
 
 .contenedor-encabezado img {
     border-radius: 50%;
-    width: 200px;
+    width: 50%;
+    max-width: 250px;
     transition: .2s;
 }
 
@@ -67,19 +75,22 @@ header {
 }
 
 
-.informacion nav {
+
+.navegacion {
     margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navegacion-lista {
     list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 19px;
 }
 
 a {
     text-decoration: none;
-    margin-right: 10px;
     display: inline-block;
     transition: .2s;
 }
@@ -88,8 +99,27 @@ a:hover {
     transform: scale(1.2);
 }
 
+@media (max-width: 765px){
+    .contenedor-encabezado {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .estrellas {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
 .sobre-mi {
     display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -102,7 +132,7 @@ a:hover {
     flex-direction:column;
     border: 1px solid white;
     border-radius:7px;
-    width:500px;
+    width: 80%;
     padding:20px;
     padding-top: 10px;
     padding-bottom: 15px;
@@ -132,6 +162,18 @@ a:hover {
     gap: 10px;
 }
 
+@media (max-width: 760px){
+    .contenido-tecnologias h4 {
+        font-size: 25px;
+    }
+
+    .lista-tecnilogias {
+        flex-direction: column;
+    }
+
+}
+
+
 .lista-tecnilogias li {
     font-size: 20px;
     transition: .1s;
@@ -143,30 +185,41 @@ a:hover {
 }
 
 .proyectos {
-    margin-top: 33px;
+    width: 90%;
     display: flex;
     justify-content: space-evenly;
+    margin: auto;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+@media ( max-width: 760px){
+    .proyectos {
+        flex-wrap: wrap;
+    }
+
 }
 
 .card {
     border: 1px solid white;
     border-radius: 5px;
-    width: 250px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 8px;
+    padding-top: 5px;
     padding-bottom: 3px;
     transition: .2s;
 }
 
 
 .card img {
-    width: 150px;
+    width: 58%;
     border-radius: 8px;
     transition: .1s;
+    padding-bottom: 4px;
 }
 
 .card img:hover {
@@ -175,22 +228,24 @@ a:hover {
 
 .card-info {
     display: flex;
+    width: 70%;
     flex-direction: column;
     gap: 6px;
+    flex: 1;
 }
 
 .card-info h3 {
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .card-info p {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .card-info time {
-    font-size: 15px;
     text-decoration: underline;
     cursor: zoom-in;
+    padding-bottom: 4px;
 }
 
 hr {
