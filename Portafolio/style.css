@@ -7,7 +7,7 @@
 
 body {
     background-color: black;
-    /*animation: aparecer .6s;*/
+    animation: aparecer .6s;
 }
 
 @keyframes aparecer {

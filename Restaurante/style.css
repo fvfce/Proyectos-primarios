@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+   background: #CF450E;
+background: linear-gradient(168deg, rgba(207, 69, 14, 1) 0%, rgba(240, 65, 108, 1) 93%);
+    padding: 1px;
+    text-align: center;
+    max-height: 260px;
+}
+
+header h1 {
+    color: white;
+    font-size: 34px;
+    margin-bottom: 18px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+.menu-navegacion {
+    border-top: 1px solid white;
+    padding: 5px;
+    width: 100%;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: .2s;
+    display: inline-block;
+}
+
+.menu-navegacion a:hover {
+    transform: scale(1.2);
+    transition: .2s;
+}
+
+main {
+    margin: auto;
+    width: 90%;
+    margin-top: 60px;
+}
+
+#sobre-nosotros {
+    display: grid;
+    width: 100%;
+    gap: 80px;
+}
+
+
+#sobre-nosotros article {
+    width: 80%;
+    max-width: 350;
+}
+
+#sobre-nosotros article:nth-child(1) {
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 60%;
+}
+
+.presentacion img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+#sobre-nosotros article:nth-child(2) {
+    justify-self: end;
+    display: flex;
+    border-radius: 8px;
+
+    width: 60%;
+
+
+    gap: 10px;
+    padding: 10px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.Gastronomia img{
+    width: 50%;
+    border-radius: 8px;
+}
+
+#sobre-nosotros article:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+    width: 50%;
+
+    gap: 10px;
+    padding: 10px;
+}
+
+.historia img {
+    border-radius: 8px;
+    width: 50%;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#platos {
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+#platos h2 {
+    text-align: center;
+    font-size: 34px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    padding: 7px;
+
+
+    background: #CF450E;
+    background: linear-gradient(168deg, rgba(207, 69, 14, 1) 0%, rgba(240, 65, 108, 1) 93%);
+    border-radius: 24px;
+
+    width: 60%;
+    
+}
+
+.platillos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.cardt {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.cardt:hover {
+    transform: scale(1.1);
+}
+
+.cardt img {
+    width: 50%;
+    max-width: 250px;
+    border-radius: 40%;
+}
+
+
+#contactos {
+    
+    background: #CF450E;
+    background: linear-gradient(168deg, rgba(207, 69, 14, 1) 0%, rgba(240, 65, 108, 1) 93%);
+    
+    margin-top: 20px;
+
+    padding: 20px;
+}
+
+.contactanos {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 6px;
+}
+
+
+
+.contactanos a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    display: inline-block;
+    transition: .2s;
+}
+
+
+.contactanos a:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+
+
+
+@media (max-width: 700px) {
+    #sobre-nosotros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #sobre-nosotros article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cardt h3 {
+        font-size: 14px;
+    }
+}
