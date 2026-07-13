@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block de notas</title>
+    <link rel="stylesheet" href="decorar.css">
+</head>
+<body>
+    <header>
+        <h1>Notas</h1>
+    </header>
+
+    <main>
+        <section class="crear-notas">
+
+            <form>
+                <input type="text" placeholder="titulo" id="title">
+                <textarea class="contenido"></textarea>
+
+                <div>
+                <button type="button" class="crear">+</button>
+                <button class="borrar" type="button">Borrar</button>
+                </div>
+            </form>
+
+        </section>
+
+
+        <section class="notas">
+            <article class="block">
+                <h3>Titulo d ela nota</h3>
+
+                <p>Contenido de la nota</p>
+            </article>
+
+            <article class="block">
+                <h3>Titulo d ela nota</h3>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat exercitationem consequuntur, similique tempora quam facere aperiam sed, sequi aspernatur cumque cum minima tenetur natus repellat tempore? Magnam earum deserunt vitae!</p>
+            </article>
+        </section>
+    </main>
+
+
+    <script>
+
+       let almacen = document.querySelector(".notas");
+
+       /*verificadores*/
+        let titulo = document.getElementById("title");
+        let conten = document.querySelector(".contenido");
+        
+        
+
+       /*botones*/
+       let creador = document.querySelector(".crear")
+       let limpiar = document.querySelector(".borrar")
+       
+        function creacion_nueva() {
+            if (titulo.value === "" || conten.value === "") {
+                alert("Por favor no dejar ningun campo vacio")
+            }else {
+
+               let articulo_nuevo = document.createElement("article");
+
+
+                articulo_nuevo.innerHTML = `
+                    <h3>${titulo.value}</h3>
+
+                    <p>${conten.value}</p>
+                `
+
+                almacen.append(articulo_nuevo);
+
+                titulo.value = "";
+                conten.value = ""
+            }
+        }
+
+        creador.addEventListener("click", creacion_nueva);
+        limpiar.addEventListener("click", () => {
+            titulo.value = "";
+            conten.value = "";
+        })
+        
+    </script>
+</body>
+</html>
