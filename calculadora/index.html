@@ -33,6 +33,85 @@
      
     </div>
 
-    <script src="logica.js"></script>
+    <script>
+        let numero = document.querySelectorAll(".num");
+
+
+        let operador = document.querySelectorAll(".operar");
+
+        let igualdad = document.querySelector(".igual");
+
+        let selector = document.querySelector("input");
+
+        /*Variables de control*/
+        let resultado = ""
+
+        let preciono_boton = false;
+
+        let listado;
+
+        let recargar = 0;
+
+
+        function numeros(valor) {
+
+            if (resultado != "" && recargar === 1) {
+                selector.value = ""
+                resultado = ""
+                selector.value += valor
+            }else {
+                selector.value += valor
+            }
+
+            if (preciono_boton) {
+                preciono_boton = false
+            }
+            
+        }
+
+        function operadores(valor) {
+
+            if (valor != "x" && preciono_boton != true) {
+                selector.value += ` ${valor} `
+                preciono_boton = true;
+                recargar = 0;
+            }else if (valor === "x" && preciono_boton != true) {
+                selector.value += " * "
+                preciono_boton = true;
+                recargar = 0;
+            }
+            
+        }        
+
+        function temporal() {
+
+            let exprecion = selector.value;
+
+            listado = exprecion.split(" ");
+
+            if (listado.includes("+") || listado.includes("-") || listado.includes("*") || listado.includes("/")) {
+                selector.value = eval(exprecion);
+
+                resultado = eval(exprecion);
+                recargar = 1
+            }
+
+            
+            
+        }
+
+
+        for (let elemento of numero) {
+            elemento.addEventListener("click", () => {numeros(elemento.textContent)})
+        }
+
+        for (let oper of operador) {
+            oper.addEventListener("click", () => operadores(oper.textContent))
+        }
+
+
+        igualdad.addEventListener("click", temporal);
+
+    </script>
 </body>
 </html>
